@@ -61,7 +61,7 @@ const Calculator = () => {
     <div
       style={{
         alignSelf: "center",
-        align: "fixed"
+        align: "fixed",
       }}
     >
       {/* FORM */}
@@ -71,7 +71,24 @@ const Calculator = () => {
           setResult(mathFunction(currency, years));
         }}
       >
+        <h1>Future Value with Inflation</h1>
+        <img src="https://www.exceldemy.com/wp-content/uploads/2018/12/compound-interest-formula.png" />
+        <cite>
+          source:
+          https://www.exceldemy.com/how-to-calculate-future-value-with-inflation-in-excel/
+        </cite>
+        <ol></ol>
+        <li>Put an initial value into the "Principple"</li>
+        <li>
+          Put the number of years you're hoping to calculate the inflation for
+        </li>
+        <li>Press "Post-inflation" to get the future value</li>
+        <li>
+          <b>3.9% rate</b>
+        </li>
+        <ol></ol>
         {/* INPUTS */}
+        <nav>Book Value</nav>
         <input
           type="number"
           max="1000000"
@@ -79,6 +96,7 @@ const Calculator = () => {
           value={currency}
           onChange={(e) => currencyHandler(e)}
         />
+        <nav>Year(s)</nav>
         <input
           type="number"
           max="1000000"
@@ -87,8 +105,9 @@ const Calculator = () => {
           onChange={(e) => yearHandler(e)}
         />
 
+        <ol></ol>
         {/* BUTTONS */}
-        <button type="submit">Converts</button>
+        <button type="submit">Post-inflation</button>
         <button
           type="button"
           onClick={() => {
